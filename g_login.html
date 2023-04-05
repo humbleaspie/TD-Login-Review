@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TSG · Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- JS Third Party Libraries -->
+	<script src="UI/theme.js" type="text/javascript"></script>
+	<!-- FX API -->
+	<script src="UI/fxgapi.js?v=2.1" type="text/javascript"></script>
+	<!-- Google SSO Library -->
+	<script src="https://accounts.google.com/gsi/client" async defer></script>
+	<!-- CSS Third Party Libraries -->
+	<link rel="stylesheet" href="css/theme.css">
+	<!-- CSS Main Styles -->
+	<link rel="stylesheet" href="ui-v7.css">
+</head>
+<body>
+	
+	<!-- Header Component (Logo, Profile Icon) -->
+	<header class="header">
+		<div class="flex">
+			<a href="/fxgame/"><div class="logo">
+				<img src="tslogo.svg" />
+			</div></a>	
+		</div>
+		
+		<div class="flex">
+			<div class="header__spacer"></div>
+			
+			<a href="/fxgame/g_register.html">
+				<div class="rank__flex" style="background: #6c757d; color: #ffffff;">
+					<i class="fa fa-user-circle" aria-hidden="true"></i><span class="tsTab"></span>
+				</div>
+			</a>
+		</div>
+	</header>
+	<!-- /Header Component -->
+
+	<!-- Login Component -->
+	<div class="g__container">
+		<div class="login">
+			<div class="login__c">
+				<h1>Login</h1>
+				
+				<div class="login__view1">
+					<div class="login__form">
+						<div class="butt-align">
+							<button class="viewEmail">Sign in with an email</button>
+						</div>
+						
+						<br>
+						
+						<div class="butt-align">
+							<a class="viewGoogle"><button style="background:#777;">Continue with Google</button></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="login__view2 animate__animated animate__fadeIn hidden">
+					<div class="login__form">
+						<label>Email Address</label>
+						<input id="tsUser" type="text" value="" />
+				
+						<label>Access Code</label>
+						<input id="tsPin" type="password" value="" />
+				
+						<div id="tsStatus"></div>
+				
+						<div class="butt-align">
+							<button id="loginBtn" onclick="tsAuthenticate('tsUser', 'tsPin', 'tsStatus', authOK);">Login</button>
+						</div>
+						
+						<div class="login__view__back">Go back</div>
+					</div>
+					
+					<div class="butt-align">
+						<a href="/fxgame/g_forgot.html"><button style="background:#777;">Forgotten passcode?</button></a>
+					</div>
+				</div>
+				
+				<div class="login__view3 animate__animated animate__fadeIn hidden">
+					<div class="login__form">
+						<div id="buttonDiv"></div>
+						
+						<div class="login__view__back">Go back</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Login Component -->
+	
+	<!-- Footer Component (Copyright, Social Media) -->
+	<footer>
+		<div class="footer__c">
+			<div class="footer__left">
+				<h6>&copy; 2023 Trading Strategist Limited. All Rights Reserved.</h6>
+				
+				<a href="https://tradingdecentral.com/privacy-policy.html">Privacy Policy</a>&nbsp;•&nbsp;<a href="https://tradingdecentral.com/terms-and-conditions.html">Terms &amp; Conditions</a>
+			</div>
+			
+			<div class="footer__right">
+				<div class="socializer a sr-32px sr-squircle sr-zoom sr-icon-white sr-pad">
+					<span class="sr-instagram"><a href="https://instagram.com/TradingDecentral" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></span>
+					<span class="sr-twitter"><a href="https://twitter.com/TradeDeCentral" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></span>
+					<span class="sr-tiktok"><a href="https://www.tiktok.com/@tradingdecentral" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /Footer Component -->
+	
+	<!-- JS Login Library -->
+	<script src="UI/tsglogin.js"></script>
+
+</body>
+</html>
